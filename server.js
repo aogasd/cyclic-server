@@ -14,6 +14,7 @@ const mongo_password = process.env.MONGODB_PASSWORD;
 
 const url = "mongodb+srv://"+mongo_user+":"+mongo_password+"@"+mongo_url+"/shoppingdatabase2?retryWrites=true&w=majority"
 
+app.use("/",express.static("public"));
 app.use(express.json());
 
 mongoose.connect(url).then(
